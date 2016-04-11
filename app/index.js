@@ -25,6 +25,9 @@ module.exports = generators.Base.extend({
                 name: this.props.name,
             }
         );
+      	this.fs.copy(
+      		this.templatePath('presentation/index.js'), 
+      		this.destinationPath('presentation/index.js'));
     },
 
     install: function() {
