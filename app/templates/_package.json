@@ -1,0 +1,17 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.1",
+  "description": "ReactJS Powered Presentation Framework",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "3.0.3",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "spectacle": "^1.0.0"
+  }
+}
