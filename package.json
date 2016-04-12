@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Yeoman generator for spectacle presentations.",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
   "files": [
     "app"
   ],
