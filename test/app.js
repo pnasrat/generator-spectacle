@@ -15,6 +15,9 @@ describe('generator-spectacle:app', function() {
 
     it('creates files', function() {
         var expected = [
+            '.babelrc',
+            'index.html',
+            'index.js',
             'server.js',
             'package.json',
             'webpack.config.js',

@@ -28,8 +28,18 @@ module.exports = generators.Base.extend({
         );
 
         this.fs.copy(
+            this.templatePath('_babelrc'),
+            this.destinationPath('.babelrc')
+        );
+
+        this.fs.copy(
             this.templatePath('presentation/index.js'),
             this.destinationPath('presentation/index.js')
+        );
+
+        this.fs.copy(
+        	this.templatePath('index.*'),
+        	this.destinationPath('./')
         );
 
         this.fs.copy(
@@ -40,6 +50,11 @@ module.exports = generators.Base.extend({
         this.fs.copy(
         	this.templatePath('webpack.config.js'),
         	this.destinationPath('webpack.config.js')
+        );
+
+        this.fs.copy(
+            this.templatePath('assets/*'),
+            this.destinationPath('assets/')
         );
     },
 

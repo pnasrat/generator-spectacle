@@ -1,24 +1,18 @@
-/* eslint-disable */
-
 var path = require("path");
-var webpack = require("webpack");
 
 module.exports = {
   devtool: "source-map",
   entry: [
-    "webpack-hot-middleware/client",
-    "babel-polyfill",
-    "./index"
+    "./index.js"
+  ],
+  presets: [
+      require('babel-preset-es2015'),
   ],
   output: {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js",
     publicPath: "/dist/"
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ],
   module: {
     loaders: [{
       test: /\.md$/,
