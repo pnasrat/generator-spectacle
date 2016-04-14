@@ -13,6 +13,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
+    "generator-react-webpack": "^3.3.0",
     "yeoman-generator": "^0.22.5"
   },
   "devDependencies": {

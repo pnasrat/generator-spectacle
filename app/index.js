@@ -18,6 +18,7 @@ module.exports = generators.Base.extend({
         }.bind(this));
     },
 
+    // TODO(pnasrat): Composition rather than copy of spectacle-boilerplate.
     writing: function() {
         this.fs.copyTpl(
             this.templatePath('_package.json'),
@@ -25,13 +26,24 @@ module.exports = generators.Base.extend({
                 name: this.props.name,
             }
         );
-      	this.fs.copy(
-      		this.templatePath('presentation/index.js'), 
-      		this.destinationPath('presentation/index.js'));
+
+        this.fs.copy(
+            this.templatePath('presentation/index.js'),
+            this.destinationPath('presentation/index.js')
+        );
+
+        this.fs.copy(
+        	this.templatePath('server.js'),
+        	this.destinationPath('server.js')
+        );
+
+        this.fs.copy(
+        	this.templatePath('webpack.config.js'),
+        	this.destinationPath('webpack.config.js')
+        );
     },
 
     install: function() {
-        this.installDependencies();
+        this.installDependencies({ bower: false });
     }
-
 });
